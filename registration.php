@@ -8,6 +8,7 @@
     <title>Registration</title>
 </head>
 <body>
+<?php error_reporting(E_ERROR | E_PARSE); ?>
     <div class="container">
         <div class="header">
             <h2>
@@ -15,7 +16,7 @@
             </h2>
         </div>
         <form action="registration.php" method="post">
-            <?php include('error.php')?>
+            
             <div>
                 <label for="username">Username :</label>
                 <input type="text" name="username"required>

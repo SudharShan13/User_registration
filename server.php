@@ -1,5 +1,6 @@
 <?php
 session_start();
+error_reporting(E_ERROR | E_PARSE);
 $username="";
 $email="";
 
@@ -50,12 +51,9 @@ if(isset($_POST['login_user'])){
     // if(empty($password)){
     //     array_push($error,"Password is requires");
     // }
-        echo "$username";
-        echo "$password";
-        print_r($error);
- 
+       
+       
         $password = md5($password);
-        echo "$password";
         $query = "SELECT * FROM userdetails WHERE username ='$username' AND password='$password'";
         $results = mysqli_query($db,$query);
         print_r($results);
