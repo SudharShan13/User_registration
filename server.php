@@ -9,7 +9,7 @@
 </head>
 <?php
 session_start();
- error_reporting(E_ERROR | E_PARSE);
+error_reporting(E_ERROR | E_PARSE);
 $username="";
 $email="";
 $error = array();
