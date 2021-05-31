@@ -19,19 +19,23 @@ if(isset($_GET['logout'])){
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
 </head>
 <body>
-     <?php  ?> 
+    <div id="home">
+<div class="landing-text">
+
     <h1>This is the homepage</h1>
+</div>
     <?php
     if(isset($_SESSION['success'])) : ?>
     <div>
         <h3>
         <?php
-            echo $_SESSION['success'];
+            // echo $_SESSION['success'];
             unset($_SESSION['success']);
 
         ?>
@@ -39,8 +43,10 @@ if(isset($_GET['logout'])){
     </div>
     <?php endif ?>  
     <?php if(isset($_SESSION['username'])) : ?>
-    <h3>Welcome <strong><?php echo $_SESSION['username'];?></strong></h3>
-    <button><a href="index.php?logout=1">Logout</a></button>
+    <h3>Welcome <strong><?php echo $_SESSION['username'];?>!</strong></h3>
+    <button class="btn btn-default"><a href="index.php?logout=1">Logout</a></button>
     <?php endif ?>
+
+    </div>
 </body>
 </html>

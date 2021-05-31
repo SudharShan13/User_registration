@@ -1,3 +1,20 @@
 body{
     background-color: aqua;
+    font-family: sans-serif;
+}
+.login-register-text{
+    padding-top: 10;
+    color: #111;
+    font-weight: 600;
+}
+.login-register-text a{
+    text-decoration: none;
+    color: #6c5ce7;
+}
+.landing-text{
+    text-align: center;
+    vertical-align: middle;
+}
+.btn-default{
+    color: #fff;
 }

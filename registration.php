@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registration</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <script src="main.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
@@ -17,31 +18,23 @@
 <!-- <?php echo $_SESSION['status']; ?> -->
 <!-- <?php error_reporting(E_ERROR | E_PARSE); ?> -->
     <div class="container">
-        <div class="header">
-            <h2>
-                Register
-            </h2>
-        </div>
         <form action="registration.php" method="post">
-            
-            <div>
-                <label for="username">Username :</label>
-                <input type="text" name="username"required id="username">
+            <p class="login-text" style="font-size: 2rem; font: weight 800px;">Register</p>
+            <div class="form-group">
+                <input class="form-control" type="text" name="username" required id="username" placeholder="Username">
             </div>
-            <div>
-                <label for="email">Email :</label>
-                <input type="email" name="email"required>
+            <div class="form-group">
+                <input class="form-control" type="email" name="email"required placeholder="Email">
             </div>
-            <div>
-                <label for="password_1">Password :</label>
-                <input type="password" name="password_1"required>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password_1"required placeholder="Password">
             </div>
-            <div>
-                <label for="password_2">Confirm Password:</label>
-                <input type="password" name="password_2"required>
+            <div class="form-group">
+                <input class="form-control" type="password" name="password_2"required placeholder="Confirm Password">
             </div>
-            <button type="submit" id="btn" name="reg_user" )>submit</button>
-
+            <div class="form-group">
+            <button class="btn btn-primary" type="submit" id="btn" name="reg_user" )>submit</button>
+            </div>
             <p>Already a user?<a href="login.php"><b>LogIn</b></a></p>
         </form>
     </div>
